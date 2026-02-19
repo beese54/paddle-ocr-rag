@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Vector database (generated locally, not committed)
+chroma_db/
+
+# Document data (user-specific, not committed)
+data/markdown/*.md
+data/json/*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Redundant example file (keep only .env.example)
+.env copy.example

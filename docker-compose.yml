@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  rag-app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data          # your markdown/json source files
+      - ./chroma_db:/app/chroma_db  # persisted vector store
+    env_file:
+      - .env
+    restart: unless-stopped
